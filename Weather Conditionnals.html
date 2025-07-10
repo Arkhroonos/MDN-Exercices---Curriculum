@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Conditionals: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview"></section>
+    <select class="season_selector">
+      <option value="winter">Winter</option>
+      <option value="summer">Summer</option>
+      <option value="fall">Fall</option>
+      <option value="spring">Spring</option>
+
+    </select>
+    <div class="response"></div>
+
+  </body>
+  
+  
+  <script>
+    let season = 'summer';
+    let response;
+
+    // Add your code here
+if(season === 'summer'){
+    console.log("Let's listen to the music of the sun")
+}
+else{
+    console.log("Uh Oh !!! Looks like it's not the right season")
+}
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    para1.textContent = response;
+    section.appendChild(para1);
+    
+  </script>
+
+</html>
