@@ -3,17 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" src="../Dynamic Shopping List/styles.css">
     <title>Shopping list example</title>
     <style>
-      li {
-        margin-bottom: 10px;
-      }
-
-      li button {
-        font-size: 12px;
-        margin-left: 20px;
-        color: #666;
-      }
+     
     </style>
   </head>
   <body>
@@ -29,36 +22,7 @@
     <ul>
 
     </ul>
-
-    <script>
-        const uList = document.querySelector('ul');
-        const inpt = document.querySelector('input');
-        const btn = document.querySelector('button');
-
-        btn.addEventListener('click', () => {
-  
-  const itemValue = inpt.value;
-
-  inpt.value = '';
-
-  const listItem = document.createElement('li');
-  const span = document.createElement('span');
-  const deleteBtn = document.createElement('button');
-
-  span.textContent = itemValue;
-  deleteBtn.textContent = 'Delete';
-
-  listItem.appendChild(span);
-  listItem.appendChild(deleteBtn);
-  uList.appendChild(listItem);
-
-  deleteBtn.addEventListener('click', () => {
-    uList.removeChild(listItem);
-  });
-
-  inpt.focus();
-});
-
-    </script>
+<script type="module" src="../Dynamic Shopping List/script.js"></script>
   </body>
+  
 </html>

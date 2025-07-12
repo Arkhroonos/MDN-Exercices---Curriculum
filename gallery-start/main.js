@@ -1,4 +1,4 @@
-const displayedImage = document.querySelector('.displayed-img');
+const displayedImage = document.querySelector('.displayed-img'); /* */
 const thumbBar = document.querySelector('.thumb-bar');
 
 const btn = document.querySelector('button');
@@ -35,7 +35,7 @@ thumbBar.appendChild(newImage);
 
 /* Wiring up the Darken/Lighten button */
 
-btn.addEventListener('click', () => {
+btn.addEventListener('click', () => { // Correction is needed about the overlay.
     const currentClass = btn.getAttribute('class');
     if (currentClass === 'dark') {
         btn.setAttribute('class', 'light');

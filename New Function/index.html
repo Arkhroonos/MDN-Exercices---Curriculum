@@ -16,19 +16,19 @@
   <input class="numberInput" type="text">
   <p></p>
 
-  <script>
-    const input = document.querySelector('.numberInput');
-    const para = document.querySelector('p');
+  <script> 
+    const input = document.querySelector('.numberInput'); // Select the Input with the 'numberInput' class.
+    const para = document.querySelector('p'); // Select the paragraph.
 
-    function squared(num) {
+    function squared(num) { // Squares up a Number
   return num * num;
 }
 
-function cubed(num) {
+function cubed(num) { 
   return num * num * num;
 }
 
-function factorial(num) {
+function factorial(num) { 
   if (num < 0) return undefined;
   if (num === 0) return 1;
   let x = num - 1;
@@ -38,14 +38,14 @@ function factorial(num) {
   }
   return num;
 }
-input.addEventListener("change", () => {
-  const num = parseFloat(input.value);
-  if (isNaN(num)) {
+input.addEventListener("change", () => { // This event Listener checks each changes then executes if/else
+  const num = parseFloat(input.value); 
+  if (isNaN(num)) { // Checks if Input is a number
     para.textContent = "You need to enter a number!";
   } else {
-    para.textContent = `${num} squared is ${squared(num)}. `;
-    para.textContent += `${num} cubed is ${cubed(num)}. `;
-    para.textContent += `${num} factorial is ${factorial(num)}. `;
+    para.textContent = `${num} squared is ${squared(num)}. `; // Adds the squared number to the "p"
+    para.textContent += `${num} cubed is ${cubed(num)}. `; // Adds the cubed number to the previous string 
+    para.textContent += `${num} factorial is ${factorial(num)}. `; // Adds the factorial to the previous strings
   }
 });
 
